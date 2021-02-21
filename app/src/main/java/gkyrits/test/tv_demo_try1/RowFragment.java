@@ -3,7 +3,6 @@ package gkyrits.test.tv_demo_try1;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Toast;
 
 import androidx.leanback.app.BrowseFragment;
 import androidx.leanback.widget.ArrayObjectAdapter;
@@ -80,7 +79,9 @@ public class RowFragment extends BrowseFragment {
         setOnSearchClickedListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getContext(),"Search...:",Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getContext(),"Search...:",Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(getContext(),SearchActivity.class);
+                startActivity(i);
             }
         });
     }
